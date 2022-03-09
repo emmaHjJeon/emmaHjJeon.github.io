@@ -1,0 +1,17 @@
+---
+layout: base 
+--
+
+{% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
+
+<!-- <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-HK5dmL8aL935j3DF" 
+ data-ad-width   = "160" 
+ data-ad-height  = "600"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
+
+{% include analytics.html %}
+
+{% include component/page-button.html %}
+{% include component/about.html author=page.author %}
+{% include component/related-posts.html %}
