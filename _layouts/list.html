@@ -4,7 +4,7 @@ layout: page
 <div class="markdown-body">
   {{ content }}
 </div>
-<!-- {% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
+{% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
 
 {% assign date_formats  = site.data.strings.date_formats               %}
 {% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
@@ -24,4 +24,4 @@ layout: page
   {% include_cached components/post-list-item.html post=post format=list_entry %}
   {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
-</div> -->
+</div>
