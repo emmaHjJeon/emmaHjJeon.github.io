@@ -13,117 +13,251 @@
   }
 }
 
-  // for top-menu
-.top-menu-wrapper{
-  display: inline-block;
+clap-button+p.message, clap-button+p.note-sm, clap-button+p#markdown-toc, clap-button+p.note {
+    display: none;
 }
+
+clap-button {
+  display: none;
+}
+
 .top-menu{
-  overflow-x: auto; // overflowx 속성은 x 축, 즉 왼쪽과 오른쪽의 내용이 더 길 때(가로),
-  overflow-y: hidden; // overflowy 속성은 y 축, 즉 위와 아래의 내용이 더 길때 (세로) 어떻게 보일지 선택하는 속성
-  white-space: nowrap; // whitespace 는 스페이스와 탭, 줄바꿈, 자동줄바꿈을 어떻게 처리할지 정하는 속성, nowrap :병합
+  overflow-x: auto;       // overflow-x 속성은 x축, 즉 왼쪽과 오른쪽의 내용이 더 길 때(가로),
+  overflow-y: hidden;     // overflow-y 속성은 y축, 즉 위와 아래의 내용이 더 길때 (세로) 어떻게 보일지 선택하는 속성
+  white-space: nowrap;    // white-space는 스페이스와 탭, 줄바꿈, 자동줄바꿈을 어떻게 처리할지 정하는 속성, nowrap : 병합
 }
 
 // for top-menu
 .top-menu.nav-btn{
   border: none;
-  display: inline-flex; // Flex 는 요소의 크기가 불분명하거나 동적인 경우에도, 각 요소를 정렬할 수 있는 효율적인 방법을 제공, Inline 특성의 Flex Container 를 정의
-  width: 6rem; // inlineflex : Inline(Inline Block) 요소와 같은 성향(수평 쌓임)
+  display: inline-flex; // Flex는 요소의 크기가 불분명하거나 동적인 경우에도, 각 요소를 정렬할 수 있는 효율적인 방법을 제공, Inline 특성의 Flex Container를 정의
+  width: 6rem;          // inline-flex : Inline(Inline Block) 요소와 같은 성향(수평 쌓임)
   margin-left: -1px;
 }
 
-// profile avatar image
+
+.nav-btn-bar {
+  height: 3rem;
+}
+
 .content .avatar {
-  float: right !important;    // 왼쪽으로 보낼지 오른쪽으로 보낼지
+  float: left  !important;
   box-sizing: content-box;
   border: 1rem solid var(--body-bg);
   transition: border-color 1s ease;
   margin-top: 5px !important;
   margin-left: 5px !important;
-  width:140px !important; 	// 이미지 크기 
-  height:140px !important;
-}
-.author-body-description {
-  margin-left: 20px !important;  // 소개글 위치 정하기 200px
-  margin-top: 20px !important;      // 20px
+  width : 140px !important;
+  height: 140px !important;
 }
 
+.author-body-description{
+  margin-left: 200px !important;
+  margin-top: 40px !important;
+}
 
-// // time-line 목차 리스트
-// .list-lead{
-//   margin-bottom: 0 !important;
-// }
-// .list-lead::after {
-//   content:"" !important;
-//   display:block !important;
-//   position: relative !important;
-//   border-radius: 50% !important;
-//   width: 12px !important;
-//   height: 12px !important;
-//   top: -21px !important;
-//   left: 62px !important;
-//   // border: 3px solid;
+.content a:not(.btn):not(.no-hover) {
+    text-decoration-color: rgba(37, 175, 185, 0.5);
+}
 
-//   background-color: lightgrey !important;
-//   z-index: 1 !important;
-// }
-// .list-post li {
-//   line-height: 3rem !important;
-// }
-// .list-post > ul > li:first-child::before, .list-post > ul > li::after{
-//   content: "" !important;
-//   width: 4px !important;
-//   left: 66px !important;
-//   display: inline-block !important;
-//   float: left !important;
-//   position: relative !important;
-//   background-color: lightgrey !important;
-// }
-// .list-post > ul > li > div{
-//   white-space: nowrap !important;
-//   overflow: hidden !important;
-//   text-overflow: ellipsis !important;
-// }
-// .list-post > ul > li > div > a{
-//   margin-left: 1.5rem !important;
-//   position: relative !important;
-// }
-// .list-post > ul > li > div > a::before{
-//   content: "" !important;
-//   display: inline-block !important;
-//   position: relative !important;
-//   border-radius: 50% !important;
-//   width: 8px !important;
-//   height: 8px !important;
-//   float: left !important;
-//   top: 1.35rem !important;
-//   left: 60px !important;
-//   box-shadow: 0 0 5px 0 grey !important;
-//   background-color: white !important;
-//   z-index: 1 !important; 
+.markdown-body > p > a {
+  font-weight: bold !important;
+  color: rgb(3,102,214) !important;
+}
 
-//   transition: all 0.5s !important;
-// }
-// .list-post > ul > li > div > a:hover::before{
-//   background-color: lightgrey !important;
-//   margin-right: 0.3rem !important;
-//   box-shadow: 0 0 2px 0 grey !important;
-// }
-// .list-post > ul > li:first-child::before{
-//   height: 3.0rem !important;
-//   top: -1.5rem !important;
-// }
-// .list-post > ul > li:not(:last-child)::after{
-//   height: 3.3rem !important;
-//   top: -1.3rem !important;
-// }
-// .list-post ul:not(:last-child)>li:last-child::after{
-//   height: 5.2rem !important;
-//   top: -1.3rem !important;
-// }
+.markdown-body > ol > li > p > a {
+  font-weight: bold !important;
+  color: rgb(3,102,214) !important;
+}
 
-// .list-post .related-posts>li+li{
-//   margin-top: 0 !important;
-// }
-// .list-post li.h6{
-//   margin-top: 0 !important;
-// }
+.markdown-body {
+  kbd {
+    font-size: 15px;
+    font-family: monospace;
+    color: #555;
+    background-color: #fcfcfc;
+    border : solid 1px #ccc;
+    border-radius: 3px;
+    border-bottom-color: #bbb;
+    padding: 3px 5px;
+  }
+  mark {
+    padding: 3px 5px;
+    background-color: #FFF9C4;
+  }
+  under {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-position: under;
+    padding-bottom: 2px;
+  }
+}
+
+
+code {
+    padding: .25em .5em;
+    background-color: rgb(251,232,201);
+    border-radius: 5px;
+}
+
+pre>code {
+    font-size: 1.1em;
+}
+
+.highlight {
+  color: rgb(201,201,201) !important;
+  background-color: rgb(21,21,21) !important;
+}
+
+.page-control {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-control > div {
+  max-width: 50% !important;
+}
+
+.page-control > div > a {
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff !important;
+  border-radius: 16px !important;
+  border: 3px solid #0589d6 !important;
+  padding:6px 100px !important;
+  font-family: Arial !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+.page-control > div > a:hover {
+  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%) !important;
+  background-color:#f6f6f6 !important;
+}
+
+.page-control > div > a:active {
+  position:relative;
+  top:1px;
+  }
+
+// 메뉴
+.spread-btn{
+  right: 15%;
+  position: absolute;
+  padding: 0;
+  padding-top: 2px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu-wrapper {
+  text-align: left;
+  margin-left: 30%;
+}
+.submenu.menu-wrapper{
+  right: 10%;
+  position: absolute;
+  background-color: rgb(27, 5, 63);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(224, 195, 195, 0.7);
+  width: 10rem;
+  z-index: 2;
+  ul{
+    margin: 0;
+    padding: 0 1.25rem;
+  }
+}
+.submenu.menu-wrapper.hide{
+  display: none;
+}
+
+a.external::after, a::after {
+  display: none;
+}
+
+
+// time-line 목차 리스트
+.list-lead{
+  margin-bottom: 0 !important;
+}
+.list-lead::after {
+  content:"" !important;
+  display:block !important;
+  position: relative !important;
+  border-radius: 50% !important;
+  width: 12px !important;
+  height: 12px !important;
+  top: -21px !important;
+  left: 62px !important;
+  // border: 3px solid;
+
+  background-color: lightgrey !important;
+  z-index: 1 !important;
+}
+.list-post li {
+  line-height: 3rem !important;
+}
+.list-post > ul > li:first-child::before, .list-post > ul > li::after{
+  content: "" !important;
+  width: 4px !important;
+  left: 66px !important;
+  display: inline-block !important;
+  float: left !important;
+  position: relative !important;
+  background-color: lightgrey !important;
+}
+.list-post > ul > li > div{
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.list-post > ul > li > div > a{
+  margin-left: 1.5rem !important;
+  position: relative !important;
+}
+.list-post > ul > li > div > a::before{
+  content: "" !important;
+  display: inline-block !important;
+  position: relative !important;
+  border-radius: 50% !important;
+  width: 8px !important;
+  height: 8px !important;
+  float: left !important;
+  top: 1.35rem !important;
+  left: 60px !important;
+  box-shadow: 0 0 5px 0 grey !important;
+  background-color: white !important;
+  z-index: 1 !important; 
+
+  transition: all 0.5s !important;
+}
+.list-post > ul > li > div > a:hover::before{
+  background-color: lightgrey !important;
+  margin-right: 0.3rem !important;
+  box-shadow: 0 0 2px 0 grey !important;
+}
+.list-post > ul > li:first-child::before{
+  height: 3.0rem !important;
+  top: -1.5rem !important;
+}
+.list-post > ul > li:not(:last-child)::after{
+  height: 3.3rem !important;
+  top: -1.3rem !important;
+}
+.list-post ul:not(:last-child)>li:last-child::after{
+  height: 5.2rem !important;
+  top: -1.3rem !important;
+}
+
+.list-post .related-posts>li+li{
+  margin-top: 0 !important;
+}
+.list-post li.h6{
+  margin-top: 0 !important;
+}
+
