@@ -140,5 +140,31 @@ categories:
             - Object 
             - Array 
             - Function 
+    
+    - undefined vs null 
+        - undefined: 선언만 해놓고 값을 대입하지 않은 상태 
+        - null: 아무것도 가리키지 않음을 명시적으로 대입해 놓은 상태
+        - 명시적 형변환 
+            - Number(undefined) // NaN
+            - Number(null) // 0 
 
-### 3. 
+    - 원시값의 wrapper 객체 ) 
+        ```js 
+        const bool = false; 
+        const num = 123; 
+        const str = 'string'; 
+
+        const bool2 = New Boolean(false); 
+        const num2 = New Number(123); 
+        const str2 = New String('string');
+
+        console.log(typeof bool); // boolean 
+        console.log(typeof bool2); // object  
+
+        console.log('string' instanceof String); // false 
+        console.log(str instancof String); // true 
+        ```
+    
+    - 형변환 
+        -> 명시적 변환을 하자
+### 3. Boolean
