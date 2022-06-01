@@ -167,4 +167,6 @@ categories:
     
     - 형변환 
         -> 명시적 변환을 하자
+
 ### 3. Boolean
+
