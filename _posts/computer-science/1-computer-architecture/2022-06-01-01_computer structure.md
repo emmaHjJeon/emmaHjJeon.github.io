@@ -8,10 +8,11 @@ hide_last_modified: false
 categories: computer-science/1-computer-architecture
 ---
 
-# 컴퓨터구조
-
 * toc
 {:toc .large-only}
+
+# 컴퓨터구조
+
 ## HW SW 
     - sw: os, application 
     - hw: CPU, Memory, Storage, Network
